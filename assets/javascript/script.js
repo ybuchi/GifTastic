@@ -68,6 +68,8 @@ $("#add-category").click(function(){
     addCategory(catInput);
     console.log(categoryArr);
 
+    $("input[type=text][name=newcategory]").val("");
+
 })
 
 });
