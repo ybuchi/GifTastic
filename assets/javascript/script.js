@@ -29,7 +29,8 @@ function addCategory(userInput){
         for (i = 0; i < categoryArr.length; i++){
             //Create a button element
             var newButton = $("<button>");
-            //Give the button an id equal to the category value
+            //Give the button a class and an id equal to the category value
+            newButton.addClass("category-button");
             newButton.attr("id", categoryArr[i]);
             //Add the text to the button
             newButton.text(categoryArr[i]);
@@ -43,6 +44,8 @@ function addCategory(userInput){
         for (i = 0; i < categoryArr.length; i++){
             //Create a button element
             var newButton = $("<button>");
+            //Give the button a class
+            newButton.addClass("category-button");
             //Give the button an id equal to the category value
             newButton.attr("id", categoryArr[i]);
             //Add the text to the button
@@ -58,7 +61,8 @@ function addCategory(userInput){
 
 // If a user inputs something, pass it into the add category function
 
-$("#add-category").click(function(){
+$("#new-category").submit(function(event){
+    console.log("The form has been submitted");
             
     var catInput = $("input[type=text][name=newcategory]").val().trim();
     console.log(catInput);
@@ -70,13 +74,31 @@ $("#add-category").click(function(){
 
     $("input[type=text][name=newcategory]").val("");
 
-})
+    //Had to use event.preventDefault() as there seemed to be some default functionality from the form button or from Bootstrap form functionality.
+    event.preventDefault();
 
 });
-//End of the Document Ready
 
-//Create a function that will create the buttons. Use a loop that appensa a button for each string in the array.
+//A J A X : 
+//When the user clicks a button that was created, use this button's ID to make an AJAX call
+$(document).on("click", ".category-button", function(){
+
+var q = $(".category-button").attr("id");
+console.log("The value of the button I just clicked on is:" + q);
+
+var APIkey = "hZIRhlj4Dr05NlkiSLKE83kSVqKZ2cTZ";
+var gifLimit = 10;
+var queryURL = "https://api.giphy.com/v1/gifs/search?" + "api_key=" + APIkey + "&limit="+ gifLimit + "&offset=0&rating=G&lang=en" + "&q=" + q;
 
 //Make the AJAX call that will grap 10 STATIC, non animated gifs and will display them on the page. 
+
+
+});
+
+
+});
+//^End of the Document Ready
+
+
 
 //Make sure to display the gif's rating as well, to be displayed under every gif.
