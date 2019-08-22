@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,14 +16,28 @@
     <title>GifTastic</title>
 </head>
 
-
 <body>
 
+    <div class="container">
+        <div class="row">
+            <!-- Create a div that will hold the buttons -->
+            <div class="col-md-9" id="container-gif"></div>
 
+            <!-- Create a form where the user will be able to add another animal/button -->
+            <form class="col-md-3" id="new-category">
+            Add a category:<br>
+            <input type="text" name="newcategory">
+            </form>
 
+        </div>
+    </div>
 
-
-
+    <!-- Create a div where the gifs will be displayed -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" id="gif-display"></div>
+        </div>
+    </div>
 
 
 <!-- LINK TO JQUERY CDN AND JAVASCRIPT SCRIPT -->
