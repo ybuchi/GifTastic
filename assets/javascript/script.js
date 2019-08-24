@@ -83,6 +83,8 @@ $("#new-category").submit(function(event){
 //A J A X : 
 //When the user clicks a button that was created, use this button's ID to make an AJAX call
 $(document).on("click",".category-button", function(){
+//Empty whatever is inside the gif div
+$("#gif-display").empty();
 //Grab and store the data-category property of the button
 var category = $(this).attr("data-category");
 console.log("The value of the button I just clicked on is:" + category);
