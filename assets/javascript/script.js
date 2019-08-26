@@ -30,7 +30,7 @@ function addCategory(userInput){
             //Create a button element
             var newButton = $("<button>");
             //Give the button a class and an id equal to the category value
-            newButton.addClass("category-button");
+            newButton.addClass("category-button btn btn-secondary mx-2 my-3");
             //Give the button a property of data-sport
             newButton.attr("data-category", categoryArr[i]);
             //Add the text to the button

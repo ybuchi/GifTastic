@@ -5,29 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+
 
     <title>GifTastic</title>
 </head>
 
 <body>
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center title">
+            <div class="container">
+              <h1 class="display-4" id="giftastic-title">GIFTASTIC!</h1>
+              <p class="lead">Enter a category to find its top 10 GIFs!</p>
+            </div>
+    </div>
 
-    <div class="container">
+    <!-- Container that holds the add category search box and the gifs -->
+    <div class="container mt-3 border p-4">
         <div class="row">
             <!-- Create a div that will hold the buttons -->
             <div class="col-md-9" id="button-container"></div>
 
             <!-- Create a form where the user will be able to add another animal/button -->
             <form class="col-md-3" id="new-category">
-            Add a category:<br>
-            <input type="text" name="newcategory"><br>
-            <button class="btn btn-primary" id="add-category">Add Category</button>
+            <input type="text" name="newcategory" placeholder="Add a cateogry"><br>
+            <button class="btn btn-primary mt-1" id="add-category">Add Category</button>
             </form>
 
         </div>
